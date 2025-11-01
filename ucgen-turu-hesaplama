@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main(int argc, char *argv[]) {
+
+int a,b,c;
+
+printf("Üçgenin kenarlarını giriniz.\n");
+scanf("%d %d %d",&a,&b,&c);
+
+if(a+b+c==180){
+	if(a==b && a!=c){
+		printf("Bu üçgen ikizkenar");
+	}
+	
+	else if(a==c && a!=b){
+		printf("Bu üçgen ikizkenar");
+	}
+	
+	else if(b==c && a!=b){
+		printf("Bu üçgen ikizkenar");
+	}
+	
+	else if(a==b && a==c){
+		printf("Bu üçgen eşkenar");
+	}
+	
+	else {
+		printf("Bu üçgen çeşitkenar");
+	}
+}
+
+
+else{
+	printf("Böyle bir üçgen oluşturulamaz.");
+}
+
+
+
+	return 0;
+}
