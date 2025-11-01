@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char *argv[]) {
+	
+	int code,hacim,d,ayrit1,ayrit2,ayrit3,yukseklik,yaricap,sonuc;
+	
+	printf("Hosgeldiniz\n");
+	printf("Kütlesini hesaplayacaginiz cismi seciniz.(Dörtgen için 1, silindir için 2 giriniz)\n");
+	scanf("%d",&code);
+	
+	if(code==1) {
+		printf("Dortgeni sectiniz.\n");
+		printf("Ayrit uzunluklarini giriniz.\n");
+		
+		printf("Birinci: \n");
+		scanf("%d",&ayrit1);
+		
+		printf("İkinci: \n");
+		scanf("%d",&ayrit2);
+		
+		printf("Ucuncu: \n");
+		scanf("%d",&ayrit3);
+		
+		printf("Malzemenin ozkutlesini giriniz: \n");
+		scanf("%d",&d);
+		
+		sonuc= ayrit1*ayrit2*ayrit3*d;
+		printf("Sonuc: %d",sonuc);
+		
+		
+	}
+	else if(code==2){
+		
+		printf("Silindiri sectiniz.\n");
+		
+		printf("Yuksekligi giriniz.\n");
+		scanf("%d",&yukseklik);
+		
+		printf("Yaricap giriniz.\n");
+		scanf("%d",&yaricap);
+		
+		printf("Malzemenin ozkutlesini giriniz.\n");
+		scanf("%d",&d);
+		
+		sonuc= 3*yaricap*yaricap*yukseklik;
+		printf("Sonuc: %d",sonuc);
+	}
+	else{
+		printf("Yanlis kod girdiniz.");
+		
+	}
+	return 0;
+}
